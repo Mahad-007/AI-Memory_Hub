@@ -5,11 +5,11 @@ import { UseCasePage } from '@/components/sections/UseCasePage';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'AI Memory Layer for Students: Stop Losing Research & Sources (2025)',
+  title: 'AIMemoryHub for Students: Stop Losing Research & Sources (2025)',
   description: 'How students use AI memory layers to organize thesis research, save sources, and never lose context. Compare tools, workflows, and real examples for academic work.',
   keywords: ['AI memory for students', 'thesis organization AI', 'research organization tool', 'student knowledge base', 'academic research AI', 'literature review AI'],
   alternates: {
-    canonical: 'https://aimemorylayer.com/for-students',
+    canonical: 'https://aimemoryhub.com/for-students',
   },
 };
 

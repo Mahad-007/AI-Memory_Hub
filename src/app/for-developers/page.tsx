@@ -5,7 +5,7 @@ import { UseCasePage } from '@/components/sections/UseCasePage';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'AI Memory Layer for Developers: MCP Integration & Codebase Knowledge (2025)',
+  title: 'AIMemoryHub for Developers: MCP Integration & Codebase Knowledge (2025)',
   description: 'How developers use AI memory layers with MCP integration for Cursor, Claude Code, and VS Code. Keep architectural decisions and debugging notes accessible.',
   keywords: ['AI memory for developers', 'MCP integration', 'developer knowledge base', 'Cursor memory', 'Claude Code memory', 'codebase documentation'],
 };

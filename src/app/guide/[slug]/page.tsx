@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
     description: guide.description,
     keywords: ['AI memory layer', 'what is AI memory', 'AI context persistence', 'cross-AI memory', 'AI knowledge base', 'personal AI memory system', guide.title],
     alternates: {
-      canonical: `https://aimemorylayer.com/guide/${slug}`,
+      canonical: `https://aimemoryhub.com/guide/${slug}`,
     },
   };
 }
@@ -143,7 +143,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
             "description": "Comprehensive guide to understanding AI memory layers, how they work, and why they're essential for serious AI users",
             "author": {
               "@type": "Organization",
-              "name": "AI Memory Layer"
+              "name": "AIMemoryHub"
             },
             "datePublished": guide.lastUpdated,
             "dateModified": guide.lastUpdated

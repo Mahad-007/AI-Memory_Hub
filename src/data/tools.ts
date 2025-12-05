@@ -2,6 +2,7 @@ export interface Tool {
   slug: string;
   name: string;
   icon: string;
+  favicon: string;
   tagline: string;
   description: string;
   pricing: {
@@ -31,6 +32,7 @@ export const tools: Tool[] = [
     slug: 'myneutron',
     name: 'myNeutron',
     icon: 'Atom',
+    favicon: 'https://www.google.com/s2/favicons?domain=myneutron.ai&sz=64',
     tagline: 'Visual knowledge management with cross-AI memory layer',
     description: 'myNeutron is a visual AI knowledge base that captures pages, files, notes, and important AI conversations, then makes them instantly retrievable across all your AI tools. It features a unique "seed" card system for visual organization and MCP integration for developers.',
     pricing: {
@@ -78,6 +80,7 @@ export const tools: Tool[] = [
     slug: 'mem-ai',
     name: 'Mem.ai',
     icon: 'Brain',
+    favicon: 'https://www.google.com/s2/favicons?domain=mem.ai&sz=64',
     tagline: 'Mobile-first AI memory with smart auto-tagging',
     description: 'Mem.ai is a mobile-first AI memory tool that excels at quick capture and automatic organization. It uses AI to auto-tag and organize your notes without manual effort.',
     pricing: {
@@ -120,6 +123,7 @@ export const tools: Tool[] = [
     slug: 'reflect',
     name: 'Reflect Notes',
     icon: 'BookOpen',
+    favicon: 'https://www.google.com/s2/favicons?domain=reflect.app&sz=64',
     tagline: 'Networked thinking with daily notes and backlinks',
     description: 'Reflect Notes is a beautiful networked note-taking app focused on daily notes and backlinks. It features end-to-end encryption and a focus on journal-style workflows.',
     pricing: {
@@ -161,6 +165,7 @@ export const tools: Tool[] = [
     slug: 'obsidian',
     name: 'Obsidian + AI Plugins',
     icon: 'Gem',
+    favicon: 'https://www.google.com/s2/favicons?domain=obsidian.md&sz=64',
     tagline: 'Fully customizable, local-first knowledge base',
     description: 'Obsidian is a powerful local-first note-taking app that stores everything on your computer. With community plugins, you can add AI features, but it requires more setup than alternatives.',
     pricing: {
@@ -204,6 +209,7 @@ export const tools: Tool[] = [
     slug: 'notion-ai',
     name: 'Notion AI',
     icon: 'LayoutGrid',
+    favicon: 'https://www.google.com/s2/favicons?domain=notion.com&sz=64',
     tagline: 'Workspace with built-in AI assistance',
     description: 'Notion is an all-in-one workspace with databases, docs, and wikis. Notion AI adds AI features on top, but they feel somewhat bolted-on rather than core to the product.',
     pricing: {
@@ -240,12 +246,13 @@ export const tools: Tool[] = [
     mcp: false,
     localStorage: false,
     team: true,
-    website: 'https://notion.so'
+    website: 'https://www.notion.com'
   },
   {
     slug: 'elephas',
     name: 'Elephas',
     icon: 'Laptop',
+    favicon: 'https://www.google.com/s2/favicons?domain=elephas.app&sz=64',
     tagline: 'Mac-native AI assistant with personal knowledge base',
     description: 'Elephas is a Mac-native AI assistant that works across all your Mac apps. It creates a personal knowledge base from your content and provides AI assistance system-wide.',
     pricing: {
@@ -285,6 +292,7 @@ export const tools: Tool[] = [
     slug: 'rewind',
     name: 'Rewind',
     icon: 'RotateCcw',
+    favicon: 'https://www.google.com/s2/favicons?domain=rewind.ai&sz=64',
     tagline: 'Automatic life recorder with AI search',
     description: 'Rewind records everything on your screen and makes it searchable with AI. It\'s like having perfect memory of everything you\'ve seen on your computer.',
     pricing: {
@@ -323,6 +331,7 @@ export const tools: Tool[] = [
     slug: 'saner-ai',
     name: 'Saner.AI',
     icon: 'FileSearch',
+    favicon: 'https://www.google.com/s2/favicons?domain=saner.ai&sz=64',
     tagline: 'Personal AI assistant with document understanding',
     description: 'Saner.AI is a personal AI assistant focused on deep document understanding. It excels at analyzing and working with your documents.',
     pricing: {
@@ -361,6 +370,7 @@ export const tools: Tool[] = [
     slug: 'heptabase',
     name: 'Heptabase',
     icon: 'Layers',
+    favicon: 'https://www.google.com/s2/favicons?domain=heptabase.com&sz=64',
     tagline: 'Visual card-based knowledge system',
     description: 'Heptabase uses a whiteboard-style approach to knowledge management. You organize information as visual cards on canvases, great for visual thinkers.',
     pricing: {
@@ -398,6 +408,7 @@ export const tools: Tool[] = [
     slug: 'capacities',
     name: 'Capacities',
     icon: 'Database',
+    favicon: 'https://www.google.com/s2/favicons?domain=capacities.io&sz=64',
     tagline: 'Object-based knowledge management',
     description: 'Capacities uses an object-based approach where different types of content (books, people, projects) are treated as distinct object types with their own properties.',
     pricing: {
@@ -436,6 +447,7 @@ export const tools: Tool[] = [
     slug: 'tana',
     name: 'Tana',
     icon: 'Hash',
+    favicon: 'https://www.google.com/s2/favicons?domain=tana.inc&sz=64',
     tagline: 'All-in-one workspace with AI supertags',
     description: 'Tana is a powerful all-in-one workspace that uses "supertags" to create flexible data models. It\'s highly customizable but has a significant learning curve.',
     pricing: {
@@ -474,6 +486,7 @@ export const tools: Tool[] = [
     slug: 'roam-research',
     name: 'Roam Research',
     icon: 'Network',
+    favicon: 'https://www.google.com/s2/favicons?domain=roamresearch.com&sz=64',
     tagline: 'The original networked note-taking app',
     description: 'Roam Research pioneered the bidirectional linking approach that many tools now copy. It\'s still powerful but feels dated compared to newer alternatives.',
     pricing: {
@@ -513,6 +526,7 @@ export const tools: Tool[] = [
     slug: 'logseq',
     name: 'Logseq',
     icon: 'GitBranch',
+    favicon: 'https://www.google.com/s2/favicons?domain=logseq.com&sz=64',
     tagline: 'Open-source alternative to Roam',
     description: 'Logseq is a free, open-source alternative to Roam Research. It offers similar features with local-first storage and a growing plugin ecosystem.',
     pricing: {
@@ -552,6 +566,7 @@ export const tools: Tool[] = [
     slug: 'remnote',
     name: 'RemNote',
     icon: 'GraduationCap',
+    favicon: 'https://www.google.com/s2/favicons?domain=remnote.com&sz=64',
     tagline: 'Flashcard-integrated knowledge base',
     description: 'RemNote combines note-taking with built-in spaced repetition flashcards. It\'s ideal for students who need to memorize information.',
     pricing: {
@@ -591,6 +606,7 @@ export const tools: Tool[] = [
     slug: 'craft',
     name: 'Craft',
     icon: 'PenTool',
+    favicon: 'https://www.google.com/s2/favicons?domain=craft.do&sz=64',
     tagline: 'Beautiful document editor with AI',
     description: 'Craft is a beautifully designed document editor with a native Mac/iOS experience. It includes AI features for writing assistance.',
     pricing: {

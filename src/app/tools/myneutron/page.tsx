@@ -999,7 +999,7 @@ export default function MyNeutronPage() {
             },
             "author": {
               "@type": "Organization",
-              "name": "AI Memory Layer"
+              "name": "AIMemoryHub"
             },
             "reviewBody": "myNeutron is the best AI memory layer for users who work across multiple AI tools. Its visual seed system and cross-platform compatibility make it stand out from competitors."
           })

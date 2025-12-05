@@ -69,11 +69,11 @@ export interface TryItSection {
 export const useCases: UseCase[] = [
   {
     slug: 'for-students',
-    title: 'AI Memory Layer for Students',
+    title: 'AIMemoryHub for Students',
     shortTitle: 'For Students',
     description: 'Stop losing research sources and thesis notes. Build a searchable library that grows with your academic work.',
     icon: 'GraduationCap',
-    heroTitle: 'AI Memory Layer for Students: Your Research, Always Accessible',
+    heroTitle: 'AIMemoryHub for Students: Your Research, Always Accessible',
     heroSubtitle: 'Stop losing sources in random folders. Stop re-reading the same papers. Stop explaining your thesis topic from scratch every time you open ChatGPT.',
     heroDescription: 'AI memory layers turn your scattered research into a searchable, organized knowledge base that grows with your academic work.',
     problems: [
@@ -275,11 +275,11 @@ export const useCases: UseCase[] = [
   },
   {
     slug: 'for-developers',
-    title: 'AI Memory Layer for Developers',
+    title: 'AIMemoryHub for Developers',
     shortTitle: 'For Developers',
     description: 'Keep architectural decisions, debugging notes, and code patterns accessible. Integrate with Cursor and Claude Code via MCP.',
     icon: 'Code',
-    heroTitle: 'AI Memory Layer for Developers: Your Codebase Knowledge, Always Accessible',
+    heroTitle: 'AIMemoryHub for Developers: Your Codebase Knowledge, Always Accessible',
     heroSubtitle: 'Stop digging through old PRs for architectural decisions. Stop re-solving problems you\'ve already fixed. Keep your coding knowledge at your fingertips.',
     problems: [
       'Architectural decisions scattered across old PRs, docs, and Slack threads',
@@ -356,11 +356,11 @@ export const useCases: UseCase[] = [
   },
   {
     slug: 'for-writers',
-    title: 'AI Memory Layer for Writers & Creators',
+    title: 'AIMemoryHub for Writers & Creators',
     shortTitle: 'For Writers',
     description: 'Capture research, save AI-generated drafts, organize project materials. Return to any piece with full context.',
     icon: 'PenTool',
-    heroTitle: 'AI Memory Layer for Writers: Your Creative Work, Always Accessible',
+    heroTitle: 'AIMemoryHub for Writers: Your Creative Work, Always Accessible',
     heroSubtitle: 'Never lose good writing in version chaos. Keep research, drafts, and inspiration organized and retrievable.',
     problems: [
       'Research scattered across browser tabs, notes apps, and random files',
@@ -430,11 +430,11 @@ export const useCases: UseCase[] = [
   },
   {
     slug: 'for-professionals',
-    title: 'AI Memory Layer for Professionals',
+    title: 'AIMemoryHub for Professionals',
     shortTitle: 'For Professionals',
     description: 'Maintain client context, save meeting notes, keep project history accessible. Never walk into a call unprepared.',
     icon: 'Briefcase',
-    heroTitle: 'AI Memory Layer for Professionals: Client Context, Always Accessible',
+    heroTitle: 'AIMemoryHub for Professionals: Client Context, Always Accessible',
     heroSubtitle: 'Stop context switching between clients. Stop forgetting details from last conversation. Walk into every call fully prepared.',
     problems: [
       'Context scattered across emails, Slack, Google Docs for multiple clients',

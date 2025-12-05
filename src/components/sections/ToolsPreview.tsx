@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -14,27 +15,13 @@ import {
   X,
   AlertCircle,
   ArrowRight,
-  Atom,
-  Brain,
-  BookOpen,
-  Gem,
-  LayoutGrid,
-  type LucideIcon
 } from 'lucide-react';
-
-const iconMap: Record<string, LucideIcon> = {
-  Atom,
-  Brain,
-  BookOpen,
-  Gem,
-  LayoutGrid,
-};
 
 const topTools = [
   {
     name: 'myNeutron',
     slug: 'myneutron',
-    icon: 'Atom',
+    favicon: 'https://www.google.com/s2/favicons?domain=myneutron.ai&sz=64',
     bestFor: 'Knowledge workers, researchers',
     crossAI: 'full',
     crossAIText: 'ChatGPT, Claude, Gemini, Cursor',
@@ -45,7 +32,7 @@ const topTools = [
   {
     name: 'Mem.ai',
     slug: 'mem-ai',
-    icon: 'Brain',
+    favicon: 'https://www.google.com/s2/favicons?domain=mem.ai&sz=64',
     bestFor: 'Quick capture, mobile-first',
     crossAI: 'limited',
     crossAIText: 'Limited',
@@ -56,7 +43,7 @@ const topTools = [
   {
     name: 'Reflect',
     slug: 'reflect',
-    icon: 'BookOpen',
+    favicon: 'https://www.google.com/s2/favicons?domain=reflect.app&sz=64',
     bestFor: 'Writers, networked thinking',
     crossAI: 'none',
     crossAIText: 'Standalone',
@@ -67,7 +54,7 @@ const topTools = [
   {
     name: 'Obsidian + AI',
     slug: 'obsidian',
-    icon: 'Gem',
+    favicon: 'https://www.google.com/s2/favicons?domain=obsidian.md&sz=64',
     bestFor: 'Developers, customization',
     crossAI: 'limited',
     crossAIText: 'Via plugins',
@@ -78,7 +65,7 @@ const topTools = [
   {
     name: 'Notion AI',
     slug: 'notion-ai',
-    icon: 'LayoutGrid',
+    favicon: 'https://www.google.com/s2/favicons?domain=notion.com&sz=64',
     bestFor: 'Teams, databases',
     crossAI: 'none',
     crossAIText: 'Notion-only',
@@ -138,17 +125,20 @@ export function ToolsPreview() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {topTools.map((tool) => {
-                const IconComponent = iconMap[tool.icon];
-                return (
+              {topTools.map((tool) => (
                 <TableRow key={tool.slug} className={tool.featured ? 'bg-primary/5' : ''}>
                   <TableCell className="font-medium">
                     <Link href={`/tools/${tool.slug}`} className="hover:text-primary transition-colors flex items-center gap-2">
-                      {IconComponent && (
-                        <div className="flex-shrink-0 p-1.5 rounded-md bg-primary/10">
-                          <IconComponent className="h-4 w-4 text-primary" />
-                        </div>
-                      )}
+                      <div className="flex-shrink-0 p-1.5 rounded-md bg-primary/10 border border-border">
+                        <Image
+                          src={tool.favicon}
+                          alt={`${tool.name} icon`}
+                          width={20}
+                          height={20}
+                          className="rounded"
+                          unoptimized
+                        />
+                      </div>
                       <span>{tool.name}</span>
                       {tool.featured && (
                         <Badge variant="secondary" className="ml-2 text-xs">
@@ -164,8 +154,7 @@ export function ToolsPreview() {
                   <TableCell className="text-sm">{tool.price}</TableCell>
                   <TableCell className="text-muted-foreground text-sm">{tool.feature}</TableCell>
                 </TableRow>
-              );
-              })}
+              ))}
             </TableBody>
           </Table>
         </div>

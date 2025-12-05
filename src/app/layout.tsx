@@ -18,26 +18,26 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Memory Layer: Stop Re-Explaining Yourself to AI Tools",
-    template: "%s | AI Memory Layer",
+    default: "AIMemoryHub: Stop Re-Explaining Yourself to AI Tools",
+    template: "%s | AIMemoryHub",
   },
   description: "AI memory layers solve context loss across ChatGPT, Claude, and other AI tools. Learn how memory systems work, compare 15+ solutions, and find the right tool for your workflow.",
-  keywords: ["AI memory layer", "AI memory system", "cross-AI memory", "persistent AI context", "AI that remembers", "ChatGPT memory alternative"],
-  authors: [{ name: "AI Memory Layer" }],
+  keywords: ["AI memory hub", "AI memory system", "cross-AI memory", "persistent AI context", "AI that remembers", "ChatGPT memory alternative"],
+  authors: [{ name: "AIMemoryHub" }],
   alternates: {
-    canonical: "https://aimemorylayer.com",
+    canonical: "https://aimemoryhub.com",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://aimemorylayer.com",
-    siteName: "AI Memory Layer",
-    title: "AI Memory Layer: Stop Re-Explaining Yourself to AI Tools",
+    url: "https://aimemoryhub.com",
+    siteName: "AIMemoryHub",
+    title: "AIMemoryHub: Stop Re-Explaining Yourself to AI Tools",
     description: "AI memory layers solve context loss across ChatGPT, Claude, and other AI tools. Learn how memory systems work, compare 15+ solutions, and find the right tool for your workflow.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Memory Layer: Stop Re-Explaining Yourself to AI Tools",
+    title: "AIMemoryHub: Stop Re-Explaining Yourself to AI Tools",
     description: "AI memory layers solve context loss across ChatGPT, Claude, and other AI tools.",
   },
 };

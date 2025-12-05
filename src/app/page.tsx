@@ -37,12 +37,12 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": "AI Memory Layer",
-            "url": "https://aimemorylayer.com",
+            "name": "AIMemoryHub",
+            "url": "https://aimemoryhub.com",
             "description": "Educational resource for AI memory systems and personal knowledge management",
             "publisher": {
               "@type": "Organization",
-              "name": "AI Memory Layer"
+              "name": "AIMemoryHub"
             }
           })
         }}

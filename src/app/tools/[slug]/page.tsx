@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { tools, getToolBySlug } from '@/data/tools';
 import { CTASection } from '@/components/sections/CTASection';
@@ -14,6 +15,7 @@ import {
   Star,
   ArrowRight,
   ArrowLeft,
+  ExternalLink,
   Atom,
   Brain,
   BookOpen,
@@ -126,14 +128,16 @@ export default async function ToolPage({ params }: ToolPageProps) {
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="flex-1">
               <div className="flex items-center gap-4 mb-4">
-                {iconMap[tool.icon] && (
-                  <div className="flex-shrink-0 p-3 rounded-xl bg-primary/10">
-                    {(() => {
-                      const IconComponent = iconMap[tool.icon];
-                      return <IconComponent className="h-8 w-8 text-primary" />;
-                    })()}
-                  </div>
-                )}
+                <div className="flex-shrink-0 p-3 rounded-xl bg-primary/10 border border-border">
+                  <Image
+                    src={tool.favicon}
+                    alt={`${tool.name} icon`}
+                    width={40}
+                    height={40}
+                    className="rounded"
+                    unoptimized
+                  />
+                </div>
                 <div className="flex items-center gap-3">
                   <h1 className="text-4xl font-bold tracking-tight">{tool.name}</h1>
                   {tool.isFeatured && (
@@ -164,6 +168,22 @@ export default async function ToolPage({ params }: ToolPageProps) {
                   <span className="font-semibold">{tool.rating}/5</span>
                 </div>
               )}
+
+              {/* Visit Website Button */}
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button size="lg" asChild>
+                  <a href={tool.website} target="_blank" rel="noopener noreferrer">
+                    Visit {tool.name}
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link href="/tools">
+                    Compare All Tools
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
 
             <div className="lg:w-80 bg-background rounded-xl p-6 border border-border">
@@ -352,7 +372,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
             } : undefined,
             "author": {
               "@type": "Organization",
-              "name": "AI Memory Layer"
+              "name": "AIMemoryHub"
             },
             "reviewBody": tool.description
           })

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -74,19 +75,22 @@ function CrossAIBadge({ status }: { status: 'full' | 'limited' | 'none' }) {
 }
 
 export function ToolCard({ tool }: ToolCardProps) {
-  const IconComponent = iconMap[tool.icon];
-
   return (
     <Link href={`/tools/${tool.slug}`}>
       <Card className="h-full hover:border-primary/50 transition-colors cursor-pointer">
         <CardHeader>
           <div className="flex items-start justify-between gap-2">
             <div className="flex items-start gap-3">
-              {IconComponent && (
-                <div className="flex-shrink-0 p-2 rounded-lg bg-primary/10">
-                  <IconComponent className="h-5 w-5 text-primary" />
-                </div>
-              )}
+              <div className="flex-shrink-0 p-2 rounded-lg bg-primary/10 border border-border">
+                <Image
+                  src={tool.favicon}
+                  alt={`${tool.name} icon`}
+                  width={24}
+                  height={24}
+                  className="rounded"
+                  unoptimized
+                />
+              </div>
               <div>
                 <CardTitle className="text-lg flex items-center gap-2">
                   {tool.name}

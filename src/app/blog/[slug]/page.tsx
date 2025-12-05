@@ -182,7 +182,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       )}
 
       <CTASection
-        title="Ready to Try an AI Memory Layer?"
+        title="Ready to Try an AI Memory Tool?"
         description="Compare the best tools and find the right fit for your workflow."
         primaryCTA={{ text: "Explore All Tools", href: "/tools" }}
         secondaryCTA={{ text: "Read the Complete Guide", href: "/guide/what-is-ai-memory-layer" }}
@@ -199,7 +199,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             "description": post.description,
             "author": {
               "@type": "Organization",
-              "name": "AI Memory Layer"
+              "name": "AIMemoryHub"
             },
             "datePublished": post.publishedAt,
             "dateModified": post.publishedAt

@@ -67,7 +67,7 @@ export function UseCasePage({ useCase, faqs }: UseCasePageProps) {
               <CardHeader>
                 <CardTitle className="text-primary flex items-center gap-2">
                   <Check className="h-5 w-5" />
-                  With an AI Memory Layer
+                  With an AI Memory Tool
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -127,7 +127,7 @@ export function UseCasePage({ useCase, faqs }: UseCasePageProps) {
                   <div>
                     <h4 className="font-medium text-primary mb-4 flex items-center gap-2">
                       <Check className="h-4 w-4" />
-                      With AI Memory Layer
+                      With AIMemoryHub
                     </h4>
                     <ol className="space-y-2">
                       {workflow.newWay.map((step, stepIndex) => (

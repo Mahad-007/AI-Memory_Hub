@@ -36,7 +36,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Brain className="h-8 w-8 text-primary" />
-              <span className="font-semibold text-lg">AI Memory Layer</span>
+              <span className="font-semibold text-lg">AIMemoryHub</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
               Educational resource for AI memory systems and personal knowledge management.
@@ -112,7 +112,7 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-sm text-muted-foreground text-center">
-            &copy; {new Date().getFullYear()} AI Memory Layer. Educational resource about AI memory systems.
+            &copy; {new Date().getFullYear()} AIMemoryHub. Educational resource about AI memory systems.
           </p>
         </div>
       </div>

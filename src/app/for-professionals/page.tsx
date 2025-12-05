@@ -5,7 +5,7 @@ import { UseCasePage } from '@/components/sections/UseCasePage';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'AI Memory Layer for Professionals: Client Context & Meeting Notes (2025)',
+  title: 'AIMemoryHub for Professionals: Client Context & Meeting Notes (2025)',
   description: 'How consultants and professionals use AI memory layers to maintain client context, save meeting notes, and never walk into a call unprepared.',
   keywords: ['AI memory for professionals', 'client management AI', 'consultant knowledge base', 'meeting notes AI', 'professional context management'],
 };
