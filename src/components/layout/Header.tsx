@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Brain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 const navigation = [
   { name: 'Tools', href: '/tools' },
@@ -26,7 +27,8 @@ export function Header() {
           </Link>
         </div>
 
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden items-center gap-2">
+          <ThemeToggle />
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
@@ -49,7 +51,8 @@ export function Header() {
           ))}
         </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4 lg:items-center">
+          <ThemeToggle />
           <Button asChild>
             <Link href="/tools">Explore Tools</Link>
           </Button>

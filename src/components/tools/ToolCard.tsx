@@ -1,8 +1,48 @@
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Check, X, AlertCircle, Star, ExternalLink } from 'lucide-react';
+import {
+  Check,
+  X,
+  AlertCircle,
+  Star,
+  ExternalLink,
+  Atom,
+  Brain,
+  BookOpen,
+  Gem,
+  LayoutGrid,
+  Laptop,
+  RotateCcw,
+  FileSearch,
+  Layers,
+  Database,
+  Hash,
+  Network,
+  GitBranch,
+  GraduationCap,
+  PenTool,
+  type LucideIcon
+} from 'lucide-react';
 import type { Tool } from '@/data/tools';
+
+const iconMap: Record<string, LucideIcon> = {
+  Atom,
+  Brain,
+  BookOpen,
+  Gem,
+  LayoutGrid,
+  Laptop,
+  RotateCcw,
+  FileSearch,
+  Layers,
+  Database,
+  Hash,
+  Network,
+  GitBranch,
+  GraduationCap,
+  PenTool,
+};
 
 interface ToolCardProps {
   tool: Tool;
@@ -34,22 +74,31 @@ function CrossAIBadge({ status }: { status: 'full' | 'limited' | 'none' }) {
 }
 
 export function ToolCard({ tool }: ToolCardProps) {
+  const IconComponent = iconMap[tool.icon];
+
   return (
     <Link href={`/tools/${tool.slug}`}>
       <Card className="h-full hover:border-primary/50 transition-colors cursor-pointer">
         <CardHeader>
           <div className="flex items-start justify-between gap-2">
-            <div>
-              <CardTitle className="text-lg flex items-center gap-2">
-                {tool.name}
-                {tool.isFeatured && (
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
-                    <Star className="h-3 w-3 mr-1" />
-                    Top Pick
-                  </Badge>
-                )}
-              </CardTitle>
-              <CardDescription className="mt-1">{tool.tagline}</CardDescription>
+            <div className="flex items-start gap-3">
+              {IconComponent && (
+                <div className="flex-shrink-0 p-2 rounded-lg bg-primary/10">
+                  <IconComponent className="h-5 w-5 text-primary" />
+                </div>
+              )}
+              <div>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  {tool.name}
+                  {tool.isFeatured && (
+                    <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
+                      <Star className="h-3 w-3 mr-1" />
+                      Top Pick
+                    </Badge>
+                  )}
+                </CardTitle>
+                <CardDescription className="mt-1">{tool.tagline}</CardDescription>
+              </div>
             </div>
           </div>
         </CardHeader>

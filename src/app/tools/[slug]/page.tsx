@@ -7,7 +7,48 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Check, X, AlertCircle, Star, ArrowRight, ArrowLeft } from 'lucide-react';
+import {
+  Check,
+  X,
+  AlertCircle,
+  Star,
+  ArrowRight,
+  ArrowLeft,
+  Atom,
+  Brain,
+  BookOpen,
+  Gem,
+  LayoutGrid,
+  Laptop,
+  RotateCcw,
+  FileSearch,
+  Layers,
+  Database,
+  Hash,
+  Network,
+  GitBranch,
+  GraduationCap,
+  PenTool,
+  type LucideIcon
+} from 'lucide-react';
+
+const iconMap: Record<string, LucideIcon> = {
+  Atom,
+  Brain,
+  BookOpen,
+  Gem,
+  LayoutGrid,
+  Laptop,
+  RotateCcw,
+  FileSearch,
+  Layers,
+  Database,
+  Hash,
+  Network,
+  GitBranch,
+  GraduationCap,
+  PenTool,
+};
 
 interface ToolPageProps {
   params: Promise<{ slug: string }>;
@@ -84,14 +125,24 @@ export default async function ToolPage({ params }: ToolPageProps) {
 
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <h1 className="text-4xl font-bold tracking-tight">{tool.name}</h1>
-                {tool.isFeatured && (
-                  <Badge className="bg-primary/10 text-primary">
-                    <Star className="h-3 w-3 mr-1 fill-primary" />
-                    Top Pick
-                  </Badge>
+              <div className="flex items-center gap-4 mb-4">
+                {iconMap[tool.icon] && (
+                  <div className="flex-shrink-0 p-3 rounded-xl bg-primary/10">
+                    {(() => {
+                      const IconComponent = iconMap[tool.icon];
+                      return <IconComponent className="h-8 w-8 text-primary" />;
+                    })()}
+                  </div>
                 )}
+                <div className="flex items-center gap-3">
+                  <h1 className="text-4xl font-bold tracking-tight">{tool.name}</h1>
+                  {tool.isFeatured && (
+                    <Badge className="bg-primary/10 text-primary">
+                      <Star className="h-3 w-3 mr-1 fill-primary" />
+                      Top Pick
+                    </Badge>
+                  )}
+                </div>
               </div>
               <p className="text-xl text-muted-foreground mb-6">{tool.tagline}</p>
               <p className="text-muted-foreground">{tool.description}</p>

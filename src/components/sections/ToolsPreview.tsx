@@ -9,12 +9,32 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { Check, X, AlertCircle, ArrowRight } from 'lucide-react';
+import {
+  Check,
+  X,
+  AlertCircle,
+  ArrowRight,
+  Atom,
+  Brain,
+  BookOpen,
+  Gem,
+  LayoutGrid,
+  type LucideIcon
+} from 'lucide-react';
+
+const iconMap: Record<string, LucideIcon> = {
+  Atom,
+  Brain,
+  BookOpen,
+  Gem,
+  LayoutGrid,
+};
 
 const topTools = [
   {
     name: 'myNeutron',
     slug: 'myneutron',
+    icon: 'Atom',
     bestFor: 'Knowledge workers, researchers',
     crossAI: 'full',
     crossAIText: 'ChatGPT, Claude, Gemini, Cursor',
@@ -25,6 +45,7 @@ const topTools = [
   {
     name: 'Mem.ai',
     slug: 'mem-ai',
+    icon: 'Brain',
     bestFor: 'Quick capture, mobile-first',
     crossAI: 'limited',
     crossAIText: 'Limited',
@@ -35,6 +56,7 @@ const topTools = [
   {
     name: 'Reflect',
     slug: 'reflect',
+    icon: 'BookOpen',
     bestFor: 'Writers, networked thinking',
     crossAI: 'none',
     crossAIText: 'Standalone',
@@ -45,6 +67,7 @@ const topTools = [
   {
     name: 'Obsidian + AI',
     slug: 'obsidian',
+    icon: 'Gem',
     bestFor: 'Developers, customization',
     crossAI: 'limited',
     crossAIText: 'Via plugins',
@@ -55,6 +78,7 @@ const topTools = [
   {
     name: 'Notion AI',
     slug: 'notion-ai',
+    icon: 'LayoutGrid',
     bestFor: 'Teams, databases',
     crossAI: 'none',
     crossAIText: 'Notion-only',
@@ -114,11 +138,18 @@ export function ToolsPreview() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {topTools.map((tool) => (
+              {topTools.map((tool) => {
+                const IconComponent = iconMap[tool.icon];
+                return (
                 <TableRow key={tool.slug} className={tool.featured ? 'bg-primary/5' : ''}>
                   <TableCell className="font-medium">
-                    <Link href={`/tools/${tool.slug}`} className="hover:text-primary transition-colors">
-                      {tool.name}
+                    <Link href={`/tools/${tool.slug}`} className="hover:text-primary transition-colors flex items-center gap-2">
+                      {IconComponent && (
+                        <div className="flex-shrink-0 p-1.5 rounded-md bg-primary/10">
+                          <IconComponent className="h-4 w-4 text-primary" />
+                        </div>
+                      )}
+                      <span>{tool.name}</span>
                       {tool.featured && (
                         <Badge variant="secondary" className="ml-2 text-xs">
                           Top Pick
@@ -133,7 +164,8 @@ export function ToolsPreview() {
                   <TableCell className="text-sm">{tool.price}</TableCell>
                   <TableCell className="text-muted-foreground text-sm">{tool.feature}</TableCell>
                 </TableRow>
-              ))}
+              );
+              })}
             </TableBody>
           </Table>
         </div>
