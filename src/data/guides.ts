@@ -10,6 +10,7 @@ export interface Guide {
   description: string;
   readingTime: string;
   level: 'beginner' | 'intermediate' | 'advanced';
+  displayLevel?: string;
   lastUpdated: string;
   tableOfContents: { id: string; title: string }[];
   sections: GuideSection[];
@@ -18,10 +19,11 @@ export interface Guide {
 export const guides: Guide[] = [
   {
     slug: 'what-is-ai-memory-layer',
-    title: 'What Is an AI Memory Layer? Complete Guide',
-    description: 'Complete guide to AI memory layers: how they work, why AI tools need them, implementation methods, and choosing the right solution.',
+    title: 'What Is an AI Memory Layer? Complete Guide (2025)',
+    description: 'Complete guide to AI memory layers: how they work, why AI tools need them, implementation methods, and choosing the right solution. Includes technical architecture and real workflows.',
     readingTime: '25 minutes',
     level: 'beginner',
+    displayLevel: 'Beginner to Intermediate',
     lastUpdated: '2025-12-04',
     tableOfContents: [
       { id: 'introduction', title: 'The AI Memory Problem' },

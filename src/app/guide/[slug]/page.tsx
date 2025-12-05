@@ -32,7 +32,10 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
   return {
     title: guide.title,
     description: guide.description,
-    keywords: ['AI memory layer', 'what is AI memory', 'AI context persistence', 'cross-AI memory', guide.title],
+    keywords: ['AI memory layer', 'what is AI memory', 'AI context persistence', 'cross-AI memory', 'AI knowledge base', 'personal AI memory system', guide.title],
+    alternates: {
+      canonical: `https://aimemorylayer.com/guide/${slug}`,
+    },
   };
 }
 
@@ -60,7 +63,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <div className="flex flex-wrap gap-3 mb-4">
             <Badge variant="secondary">
               <BookOpen className="h-3 w-3 mr-1" />
-              {guide.level.charAt(0).toUpperCase() + guide.level.slice(1)}
+              {guide.displayLevel || guide.level.charAt(0).toUpperCase() + guide.level.slice(1)}
             </Badge>
             <Badge variant="outline">
               <Clock className="h-3 w-3 mr-1" />
@@ -137,7 +140,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": guide.title,
-            "description": guide.description,
+            "description": "Comprehensive guide to understanding AI memory layers, how they work, and why they're essential for serious AI users",
             "author": {
               "@type": "Organization",
               "name": "AI Memory Layer"
