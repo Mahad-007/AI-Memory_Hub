@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -26,6 +29,10 @@ import {
   type LucideIcon
 } from 'lucide-react';
 import type { Tool } from '@/data/tools';
+
+const ElectricBorder = dynamic(() => import('@/components/ui/ElectricBorder'), {
+  ssr: false,
+});
 
 const iconMap: Record<string, LucideIcon> = {
   Atom,
@@ -75,9 +82,11 @@ function CrossAIBadge({ status }: { status: 'full' | 'limited' | 'none' }) {
 }
 
 export function ToolCard({ tool }: ToolCardProps) {
-  return (
+  const isMyNeutron = tool.slug === 'myneutron';
+
+  const cardContent = (
     <Link href={`/tools/${tool.slug}`}>
-      <Card className="h-full hover:border-primary/50 transition-colors cursor-pointer">
+      <Card className={`h-full hover:border-primary/50 transition-colors cursor-pointer ${isMyNeutron ? 'border-transparent' : ''}`}>
         <CardHeader>
           <div className="flex items-start justify-between gap-2">
             <div className="flex items-start gap-3">
@@ -171,4 +180,21 @@ export function ToolCard({ tool }: ToolCardProps) {
       </Card>
     </Link>
   );
+
+  if (isMyNeutron) {
+    return (
+      <ElectricBorder
+        color="#7df9ff"
+        speed={1}
+        chaos={0.5}
+        thickness={2}
+        style={{ borderRadius: 12 }}
+        className="h-full"
+      >
+        {cardContent}
+      </ElectricBorder>
+    );
+  }
+
+  return cardContent;
 }

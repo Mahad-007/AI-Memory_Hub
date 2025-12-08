@@ -1,14 +1,35 @@
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles, MessageSquare, FileText, HelpCircle, FolderOpen, X, CheckCircle, Brain, Layers, ArrowRightLeft } from 'lucide-react';
+
+const Galaxy = dynamic(() => import('@/components/ui/Galaxy'), {
+  ssr: false,
+});
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-background to-muted/20 py-20 sm:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Galaxy Background Animation - Only visible in dark mode */}
+      <div className="absolute inset-0 pointer-events-none hidden dark:block opacity-70">
+        <Galaxy
+          mouseRepulsion={true}
+          mouseInteraction={true}
+          density={1.0}
+          glowIntensity={0.4}
+          saturation={0.7}
+          hueShift={240}
+          speed={0.5}
+          twinkleIntensity={0.4}
+          rotationSpeed={0.05}
+        />
+      </div>
+      {/* Gradient overlay for better text readability in dark mode */}
+      <div className="absolute inset-0 pointer-events-none hidden dark:block bg-gradient-to-b from-background/40 via-transparent to-background/60" />
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-8 flex justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 dark:bg-muted/70 backdrop-blur-sm px-4 py-1.5 text-sm">
               <Sparkles className="h-4 w-4 text-primary" />
               <span className="text-muted-foreground">15+ AI Memory Tools Reviewed</span>
             </div>
@@ -25,7 +46,7 @@ export function Hero() {
             Your carefully explained project exists only in a chat you&apos;ll never find again.
           </p>
 
-          <div className="mt-4 p-4 bg-muted/50 rounded-lg border border-border max-w-xl mx-auto">
+          <div className="mt-4 p-4 bg-muted/50 dark:bg-muted/70 backdrop-blur-sm rounded-lg border border-border max-w-xl mx-auto">
             <p className="text-sm font-medium text-foreground">
               <span className="text-primary">Solution:</span> A Persistent AI Memory Layer
             </p>
@@ -51,10 +72,10 @@ export function Hero() {
       </div>
 
       {/* Split-screen visual comparison */}
-      <div className="mt-16 mx-auto max-w-4xl px-4 hidden md:block">
+      <div className="mt-16 mx-auto max-w-4xl px-4 hidden md:block relative z-10">
         <div className="grid grid-cols-2 gap-4">
           {/* LEFT: Frustrated / Chaotic State */}
-          <div className="relative bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20 rounded-2xl p-6 border border-red-200 dark:border-red-900/30">
+          <div className="relative bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/40 dark:to-orange-950/40 backdrop-blur-sm rounded-2xl p-6 border border-red-200 dark:border-red-900/30">
             <div className="absolute -top-3 left-4 bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300 px-3 py-1 rounded-full text-xs font-medium">
               Without Memory Layer
             </div>
@@ -97,7 +118,7 @@ export function Hero() {
           </div>
 
           {/* RIGHT: Organized / Clean State */}
-          <div className="relative bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-2xl p-6 border border-green-200 dark:border-green-900/30">
+          <div className="relative bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/40 dark:to-emerald-950/40 backdrop-blur-sm rounded-2xl p-6 border border-green-200 dark:border-green-900/30">
             <div className="absolute -top-3 left-4 bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 px-3 py-1 rounded-full text-xs font-medium">
               With Memory Layer
             </div>
