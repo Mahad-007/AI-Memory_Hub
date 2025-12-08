@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
-    "serve": "^14.2.4",
     "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",
@@ -19,9 +18,11 @@
     "next": "^14.2.33",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "serve": "^14.2.4",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
+    "@railway/cli": "^4.12.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
