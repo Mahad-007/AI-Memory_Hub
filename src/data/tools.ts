@@ -74,7 +74,7 @@ export const tools: Tool[] = [
     mcp: true,
     localStorage: false,
     team: false,
-    website: 'https://myneutron.ai'
+    website: 'https://myneutron.ai/?utm_source=aimemorylayer.com&utm_medium=referral&utm_campaign=emd-network'
   },
   {
     slug: 'mem-ai',

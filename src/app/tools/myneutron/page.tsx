@@ -406,7 +406,7 @@ export default function MyNeutronPage() {
 
                 <div className="flex flex-col gap-2 pt-4">
                   <Button asChild size="lg">
-                    <a href="https://myneutron.ai" target="_blank" rel="noopener noreferrer">
+                    <a href="https://myneutron.ai/?utm_source=aimemorylayer.com&utm_medium=referral&utm_campaign=emd-network" target="_blank" rel="noopener noreferrer">
                       Try myNeutron Free
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
@@ -621,7 +621,7 @@ export default function MyNeutronPage() {
 
           <div className="mt-8 text-center">
             <Button asChild size="lg">
-              <a href="https://myneutron.ai" target="_blank" rel="noopener noreferrer">
+              <a href="https://myneutron.ai/?utm_source=aimemorylayer.com&utm_medium=referral&utm_campaign=emd-network" target="_blank" rel="noopener noreferrer">
                 Try free plan first
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
@@ -825,7 +825,7 @@ export default function MyNeutronPage() {
               <strong>Total setup time:</strong> ~35 minutes to see if this changes your workflow
             </p>
             <Button asChild size="lg">
-              <a href="https://myneutron.ai" target="_blank" rel="noopener noreferrer">
+              <a href="https://myneutron.ai/?utm_source=aimemorylayer.com&utm_medium=referral&utm_campaign=emd-network" target="_blank" rel="noopener noreferrer">
                 Start free trial
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
@@ -932,7 +932,7 @@ export default function MyNeutronPage() {
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg">
-              <a href="https://myneutron.ai" target="_blank" rel="noopener noreferrer">
+              <a href="https://myneutron.ai/?utm_source=aimemorylayer.com&utm_medium=referral&utm_campaign=emd-network" target="_blank" rel="noopener noreferrer">
                 Try myNeutron Free
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
